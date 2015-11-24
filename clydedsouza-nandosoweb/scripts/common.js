@@ -21,9 +21,10 @@ headerText += "</div>";
 headerText += "</div>";
 headerText += "</div>";
 headerText += "<div class='container-fluid custom-jumbotron-container'>";
-headerText += "<div class='jumbotron text-center'>";
+headerText += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 jumbotron'><div class='content'>";
+headerText += "<img src='http://googledrive.com/host/0B3iPDNpwGU-tM25wT1VSUmJvdjA/nandoso-light.png' height='100' width='100' class='img img-responsive site-logo'/>";
 headerText += "<h1>Nandoso</h1>";
-headerText += "</div>";
+headerText += "</div></div>";
 headerText += "</div>";
 
 function loadWebsiteHeader() {

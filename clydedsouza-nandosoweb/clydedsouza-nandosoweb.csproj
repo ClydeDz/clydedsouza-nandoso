@@ -95,6 +95,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\comic_zine_ot-webfont.svg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -103,6 +104,10 @@
     <Content Include="scripts\specials.js" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="fonts\comic_zine_ot-webfont.eot" />
+    <Content Include="fonts\comic_zine_ot-webfont.ttf" />
+    <Content Include="fonts\comic_zine_ot-webfont.woff" />
+    <Content Include="fonts\SF_Cartoonist_Hand.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
