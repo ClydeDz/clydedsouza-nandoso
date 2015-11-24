@@ -1,7 +1,22 @@
-﻿.nav-header{
+﻿/***************************************************/
+
+/* load custom fonts */
+/* end of fonts */
+
+/***************************************************/
+
+/* header */
+.nav-header{
     background-color:#FFA633;
     border-color:#FFA633;
     color:white;
+}
+.navbar-inverse .navbar-nav > li{
+    color:white;
+    text-decoration:none;
+}
+.navbar-inverse .navbar-nav > li:hover{
+    text-decoration:underline;
 }
 .custom-jumbotron-container{
     padding:0px;
@@ -15,10 +30,23 @@
     margin-bottom:auto;
     padding-top:100px;
 }
-.navbar-inverse .navbar-nav > li{
-    color:white;
-    text-decoration:none;
-}
-.navbar-inverse .navbar-nav > li:hover{
-    text-decoration:underline;
-}
+/* end of header */
+
+/***************************************************/
+
+/* common elements */
+/* end of common elements */
+
+/***************************************************/
+
+/* footer */
+/* end of footer */
+
+/***************************************************/
+
+/* index */
+/* end of index */
+
+
+
+
