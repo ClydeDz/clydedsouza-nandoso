@@ -40,12 +40,32 @@
 /***************************************************/
 
 /* footer */
+.footer{
+    background-color:#2F2F2F;
+    color:white;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top:20px;
+}
+.footer a,.footer a:hover,.footer a:visited,.footer a:active{
+    color:white;
+}
 /* end of footer */
 
 /***************************************************/
 
 /* index */
+.item-container{
+    margin-top:20px;
+    margin-bottom:20px;
+}
 /* end of index */
+
+/***************************************************/
+
+/* menu */
+
+/* end of menu */
 
 
 

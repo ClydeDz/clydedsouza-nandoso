@@ -1,4 +1,5 @@
-﻿headerText = "<div class=' navbar navbar-inverse navbar-fixed-top nav-header'>";
+﻿var headerText = "";
+headerText = "<div class=' navbar navbar-inverse navbar-fixed-top nav-header'>";
 headerText += "<div class='container'>";
 headerText += "<div class='navbar-header'>";
 headerText += "<button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>";
@@ -25,6 +26,24 @@ headerText += "<h1>Nandoso</h1>";
 headerText += "</div>";
 headerText += "</div>";
 
-function loadHeader() {
+function loadWebsiteHeader() {
+    document.getElementById('websiteHeader').innerHTML = headerText;
+}
 
+var d = new Date();
+var year = d.getFullYear();
+var footerText = "";
+footerText += "<div class='container-fluid footer'>";
+footerText += "<div class='container'>";
+footerText += "<div class='row'>";
+footerText += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
+footerText += "<a href='/'>Home</a> | <a href='/menu'>Menu</a> | <a href='/specials'>Specials</a> | <a href='/feedback'>Feedback</a> | <a href='/find-us'>Find Us</a></br>";
+footerText += "&copy Nandoso Restaurants Ltd, " + year;
+footerText += "</div>"; // col
+footerText += "</div>"; // row
+footerText += "</div>"; // container
+footerText += "</div>"; // container fluid
+
+function loadWebsiteFooter() {
+    document.getElementById('websiteFooter').innerHTML = footerText;
 }

@@ -1,44 +1,83 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM loaded and ready to go!");
-    loadStudents();
+    //console.log("DOM loaded and ready to go!");
+    loadWebsiteHeader();
+    loadWebsiteFooter();
+    loadMenu();
 });
 
 // Used to load the student data - can actually do without this function
 // if you are not doing anything else in the load.
-function loadStudents() {
-    MenuModule.getMenu(setupStudentsTable);
+function loadMenu() {
+    MenuModule.getMenu(displayMenu);
 }
 
 // This is the function we pass into StudentModule as the callback
 // It takes the data returned from the API call (studenList) and an input
-function setupStudentsTable(studentsList) {
+var printMenuText = "";
+var starters = [];
+var mains = [];
+var deserts = [];
+var drinks = [];
+function displayMenu(menuList) {
+    // Loop through the menu for starters
+    console.log(menuList);
+    for (var i = 0; i < menuList.length; i++) {
+        if (menuList[i].Course == 0) {
+            starters.push(i);            
+        }
+        else if (menuList[i].Course == 1) {
+            mains.push(i);
+        }
+        else if (menuList[i].Course == 2) {
+            deserts.push(i);
+        }
+        else{
+            drinks.push(i);
+        }       
+    }   //end for
+    printMenu(starters, menuList);
+    document.getElementById('startersMenu').innerHTML = printMenuText;
+    printMenu(mains, menuList);
+    document.getElementById('mainsMenu').innerHTML = printMenuText;
+    printMenu(deserts, menuList);
+    document.getElementById('desertsMenu').innerHTML = printMenuText;
+    printMenu(drinks, menuList);
+    document.getElementById('drinksMenu').innerHTML = printMenuText;
+}
 
-    // Get a reference to the table body so we can add our rows in
-    var studentTable = document.getElementById("menuTable");
-    console.log(studentsList.length);
-    console.log(studentsList);
-    // Loop through all the student/name objects 
-    for (var i = 0; i < studentsList.length; i++) {
-        //Create a new row element
-        var row = document.createElement("tr");
-
-        //Create our data cells and append to row
-        var firstNameCol = document.createElement("td");
-        firstNameCol.innerHTML = studentsList[i].Item;
-        row.appendChild(firstNameCol);
-
-        var lastNameCol = document.createElement("td");
-        lastNameCol.innerHTML = studentsList[i].Description;
-        row.appendChild(lastNameCol);
-
-        var country = document.createElement("td");
-        country.innerHTML = "$ "+studentsList[i].Price;
-        row.appendChild(country);
-
-        // Append our rows to the table 
-        studentTable.appendChild(row);
-
-
+var commonCourse=[];
+function printMenu(commonCourse, menuList) {
+    printMenuText = "";
+    console.log(menuList);
+    console.log(commonCourse);
+    for (var i = 0; i < commonCourse.length; i++)
+    {        
+        printMenuText += "<div class='row'>";
+        printMenuText += "<div class='col-lg-8 col-md-8 col-sm-8 col-xs-8'>";
+        printMenuText += "<p class='menu-item'>" + menuList[commonCourse[i]].Item + "</br>";
+        printMenuText += "" + menuList[commonCourse[i]].Description + "&nbsp;" + decodeLevel(menuList[commonCourse[i]].Level) + "</p>";
+        printMenuText += "</div>";
+        printMenuText += "<div class='col-lg-4 col-md-4 col-sm-4 col-xs-4'>";
+        printMenuText += "<b>$ " + menuList[commonCourse[i]].Price + "</b>";
+        printMenuText += "</div>";
+        printMenuText += "</div>";
     }
+    if (printMenuText == "") {
+        printMenuText = "We are crafting awesome stuff here. Add this to your watchlist and come back soon ;)";
+    }
+}
 
+// decodes spicy level into color codes
+var level, levelText;
+function decodeLevel(level) {
+    if (level == 0) {
+        levelText = "<span class='label label-success'>Mild</span>";
+    }
+    else if (level == 1) {
+        levelText = "<span class='label label-warning'>Medium</span>";
+    }
+    else {
+        levelText = "<span class='label label-danger'>Hot</span>";
+    }
+    return levelText;
 }
