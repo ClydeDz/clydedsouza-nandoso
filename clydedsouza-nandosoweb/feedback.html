@@ -5,12 +5,51 @@
 	<meta charset="utf-8" />
     <link rel="shortcut icon" href="http://googledrive.com/host/0B3iPDNpwGU-tM25wT1VSUmJvdjA/favicon.png" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/default.css" rel="stylesheet" />
 </head>
 <body>
-    <p>Feedback</p>
+    <div id="websiteHeader"></div>
+    <div class="container">
+        <div class="row item-container">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1>Feedback</h1>
+                <p>At Nandoso we don't just craft and cook great quality flame grilled chicken which is known across the globe but we also stick out our ears to hear what our customers
+                have to talk about us. Join us in this the discussion at Nandoso feedback forum to tell us your opinion, likes, dislikes, suggestion and more. We will personally reply to your comments.</p>
+            </div>
+        </div>
+        <div class="row item-container">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+var disqus_config = function () {
+this.page.url = 'http://clydedsouza-nandoso.azurewebsites.net/;'  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'Feeback forum'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() {  // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//nandoso.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    </div>
+    <div id="websiteFooter"></div>
 <!--Load script files for better performance here-->
-<script src="scripts/jquery-1.9.1.js"></script>
-<script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/common.js"></script>
 <!---->
 </body>
 </html>

@@ -27,6 +27,9 @@ h1,.navbar-brand{
 h2,h3,body{
     font-family:Cartoonist_Hand, Helvetica, Arial, sans-serif;
 }
+h1,h2,h3{
+    color:#FF7806;
+}
 
 /* end of common */
 
@@ -102,6 +105,9 @@ h2,h3,body{
 /* menu */
 .menu-item{
     color:#DB0000;
+}
+.display-menu > div > h2{
+    color:#474747;
 }
 /* end of menu */
 

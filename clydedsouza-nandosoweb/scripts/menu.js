@@ -54,7 +54,7 @@ function printMenu(commonCourse, menuList) {
     {        
         printMenuText += "<div class='row'>";
         printMenuText += "<div class='col-lg-8 col-md-8 col-sm-8 col-xs-8'>";
-        printMenuText += "<p class='menu-item'>" + menuList[commonCourse[i]].Item + "</br>";
+        printMenuText += "<p><span  class='menu-item'>" + menuList[commonCourse[i]].Item + "</span></br>";
         printMenuText += "" + menuList[commonCourse[i]].Description + "&nbsp;" + decodeLevel(menuList[commonCourse[i]].Level) + "</p>";
         printMenuText += "</div>";
         printMenuText += "<div class='col-lg-4 col-md-4 col-sm-4 col-xs-4'>";
