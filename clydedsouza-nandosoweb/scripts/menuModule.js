@@ -14,7 +14,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://clydedsouza-nandosoapi.azurewebsites.net/api/Menus",
+                url: "https://clydedsouza-nandosoapi.azurewebsites.net/api/Menus",
                 success: function (data) {
                     callback(data);
                 }
