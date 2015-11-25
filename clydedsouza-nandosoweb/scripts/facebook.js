@@ -75,4 +75,7 @@ function testAPI() {
         document.getElementById('status').innerHTML =
           'Thanks for logging in, ' + response.name + '!';
     });
+    FB.api('/me/picture?type=normal', function (response) {
+        document.getElementById("userPhoto").setAttribute("src", response.data.url);
+    });
 }
