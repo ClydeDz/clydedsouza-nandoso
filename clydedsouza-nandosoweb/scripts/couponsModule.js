@@ -15,7 +15,7 @@ var CouponsModule = (function () {
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://clydedsouza-nandosoapi.azurewebsites.net/api/Coupons",
+                url: "https://clydedsouza-nandosoapi.azurewebsites.net/api/Coupons",
                 success: function (data) {
                     callback(data);
                 }
@@ -39,7 +39,7 @@ var MenuItemModule = (function () {
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://clydedsouza-nandosoapi.azurewebsites.net/api/Menus/",
+                url: "https://clydedsouza-nandosoapi.azurewebsites.net/api/Menus/",
                 success: function (data) {
                     callback(data);
                 }
