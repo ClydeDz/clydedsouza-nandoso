@@ -1,10 +1,15 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
     //console.log("DOM loaded and ready to go!");
     //loadStudentsh();
-    CouponsModule.getCoupons(loadCouponsData);
+    MenuItemModule.getMenuItem(getCouponData);    
 });
 var couponsData;
 var menuData;
+function getCouponData(_menuData) {
+    menuData = _menuData
+    console.log(menuData);
+    CouponsModule.getCoupons(loadCouponsData);
+}
 function temp(temp_var) {
     //console.log(temp_var);
     couponsData = temp_var;
@@ -40,14 +45,15 @@ var printCouponText = "";
 // This is the function we pass into StudentModule as the callback
 // It takes the data returned from the API call (studenList) and an input
 function loadCouponsData(couponsDataSet) {
+    console.log('coupons' + couponsDataSet);
     printCouponText += "<div class='row'>";
     for (var i = 0; i < couponsDataSet.length; i++) {
         printCouponText += "<div class='col-lg-6 col-md=6 col-sm-12 col-xs-12'>";
         printCouponText += "<div class='coupon-item'><div class='ticket'>";
         printCouponText += "<h3>CODE: " + couponsDataSet[i].Code + "</h3>";
-        printCouponText += "<p>You have received <b>" + couponsDataSet[i].Discount + "%</b> off on your next purchase of " + couponsDataSet[i].MenuID + "</p>";
-        printCouponText += "<p>Expires on: " + couponsDataSet[i].ExpiresOn + "</p>";
-        printCouponText += "<p>" + ((couponsDataSet[i].Exemptions == "") ? "Standard T&C apply. See at the bottom of this page" : "" + couponsDataSet[i].Exemptions) + "</p>";
+        printCouponText += "<p>You have received <b>" + couponsDataSet[i].Discount + "%</b> off on your next purchase of " + getMenuTitle(couponsDataSet[i].MenuID) + "";
+        printCouponText += "<br/>Expires on: " + couponsDataSet[i].ExpiresOn + "";
+        printCouponText += "<br/>" + ((couponsDataSet[i].Exemptions == "") ? "Standard T&C apply. See at the bottom of this page" : "" + couponsDataSet[i].Exemptions) + "</p>";
         printCouponText += "</div></div></div>";
     }
     printCouponText += "</div>";
@@ -57,4 +63,14 @@ function loadCouponsData(couponsDataSet) {
     else {
         document.getElementById('coupons').innerHTML = printCouponText;
     }
+}
+
+function getMenuTitle(_id) {
+    var returnText = "";
+    for (var i = 0; i < menuData.length; i++) {
+        if (menuData[i].ID == _id) {
+            returnText = menuData[i].Item;
+        }
+    }
+    return returnText;
 }

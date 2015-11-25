@@ -28,7 +28,7 @@ function loadSpecials(specialsData) {
             printMenuText += "" + specialsData[i].Description + "&nbsp;" + decodeLevel(specialsData[i].Level) + "</p>";
             printMenuText += "</div>";
             printMenuText += "<div class='col-lg-4 col-md-4 col-sm-4 col-xs-4'>";
-            printMenuText += "Today's special<b>$ " + (specialsData[i].Price - ((specialsData[i].Discount / 100) * specialsData[i].Price)) + "</b><br/>Original price $ " + specialsData[i].Price;
+            printMenuText += "Today's special <b>$ " + (specialsData[i].Price - ((specialsData[i].Discount / 100) * specialsData[i].Price)) + "</b><br/>Original price $ " + specialsData[i].Price;
             printMenuText += "</div>";
             printMenuText += "</div>";
         }

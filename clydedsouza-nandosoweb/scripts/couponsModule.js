@@ -30,8 +30,8 @@ var MenuItemModule = (function () {
     var pvt;
     // Only things that are returned from this closure is exposed
     return {
-        getMenuItem: function (pvt,callback) {
-            alert(pvt);
+        getMenuItem: function (callback) {
+            //alert(pvt);
             // $ means that the function is being called from JQuery
             // We pass the parameters for the api as an object
             // The success function is called when the data is recieved
@@ -39,7 +39,7 @@ var MenuItemModule = (function () {
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://clydedsouza-nandosoapi.azurewebsites.net/api/Menus/"+pvt,
+                url: "http://clydedsouza-nandosoapi.azurewebsites.net/api/Menus/",
                 success: function (data) {
                     callback(data);
                 }
