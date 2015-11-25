@@ -101,6 +101,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="scripts\facebook.js" />
     <Content Include="scripts\index.js" />
     <Content Include="scripts\couponsModule.js" />
     <Content Include="scripts\coupons.js" />
