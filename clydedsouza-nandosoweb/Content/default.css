@@ -30,7 +30,6 @@ h2,h3,body{
 h1,h2,h3{
     color:#FF7806;
 }
-
 /* end of common */
 
 /***************************************************/
@@ -62,12 +61,16 @@ h1,h2,h3{
 }
 .content{
     margin: 0px auto;
-    max-width: 460px;
-
+    max-width: 627px;
     text-align:center;
 }
 .site-logo{
     margin:0px auto;
+}
+.header-text{
+    position:relative;
+    top:-27px;
+    letter-spacing:0.1em;
 }
 /* end of header */
 
@@ -109,8 +112,17 @@ h1,h2,h3{
 .display-menu > div > h2{
     color:#474747;
 }
+.menu-item-container{
+    margin-top:15px;
+    margin-bottom:15px;
+}
 /* end of menu */
 
-
-
-
+/* ticket style css http://webdesign.tutsplus.com/tutorials/quick-tip-create-pure-css3-ticket-like-tags--webdesign-3899 */
+.coupon-item{
+    background-color:#FFF4A7;
+    margin:10px;
+    text-align:center;
+    padding:10px;
+    border:2px dashed #FE9621
+}

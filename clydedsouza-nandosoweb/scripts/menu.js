@@ -67,17 +67,4 @@ function printMenu(commonCourse, menuList) {
     }
 }
 
-// decodes spicy level into color codes
-var level, levelText;
-function decodeLevel(level) {
-    if (level == 0) {
-        levelText = "<span class='label label-success'>Mild</span>";
-    }
-    else if (level == 1) {
-        levelText = "<span class='label label-warning'>Medium</span>";
-    }
-    else {
-        levelText = "<span class='label label-danger'>Hot</span>";
-    }
-    return levelText;
-}
+// defunction decodeLevel(level) moved to common.js since it was used by multiple files

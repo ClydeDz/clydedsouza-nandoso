@@ -22,8 +22,8 @@ headerText += "</div>";
 headerText += "</div>";
 headerText += "<div class='container-fluid custom-jumbotron-container'>";
 headerText += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 jumbotron'><div class='content'>";
-headerText += "<img src='http://googledrive.com/host/0B3iPDNpwGU-tM25wT1VSUmJvdjA/nandoso-light.png' height='100' width='100' class='img img-responsive site-logo'/>";
-headerText += "<h1>Nandoso</h1>";
+headerText += "<img src='http://googledrive.com/host/0B3iPDNpwGU-tM25wT1VSUmJvdjA/nandoso-light.png' height='90' width='90' class='img img-responsive site-logo'/>";
+headerText += "<h1 class='header-text'>Nandoso</h1>";
 headerText += "</div></div>";
 headerText += "</div>";
 
@@ -47,4 +47,19 @@ footerText += "</div>"; // container fluid
 
 function loadWebsiteFooter() {
     document.getElementById('websiteFooter').innerHTML = footerText;
+}
+
+// decodes spicy level into color codes
+var level, levelText;
+function decodeLevel(level) {
+    if (level == 0) {
+        levelText = "<span class='label label-success'>Mild</span>";
+    }
+    else if (level == 1) {
+        levelText = "<span class='label label-warning'>Medium</span>";
+    }
+    else {
+        levelText = "<span class='label label-danger'>Hot</span>";
+    }
+    return levelText;
 }
