@@ -128,8 +128,8 @@ h1,h2,h3{
 }
 
 #loginButton{
-    visibility:visible;
+    display:inline-block;
 }
 #logoutButton{
-    visibility:hidden;
+    display:none;
 }

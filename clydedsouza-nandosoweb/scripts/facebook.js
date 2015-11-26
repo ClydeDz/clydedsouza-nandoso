@@ -78,8 +78,8 @@ window.fbAsyncInit = function() {
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
     //alert('here');
-    $('#loginButton').css('visibility', 'hidden');
-    $('#logoutButton').css('visibility', 'visible');
+    $('#loginButton').css('display', 'none');
+    $('#logoutButton').css('display', 'inline-block');
     //document.getElementById('loginButton').hidden = 'hidden';
   //  document.getElementById('logoutButton').hidden = 'visible';
     console.log('Welcome!  Fetching your information.... ');
