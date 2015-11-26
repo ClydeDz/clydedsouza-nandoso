@@ -5,6 +5,7 @@ var accessCard = "";
 function logoutFacebook() {
     FB.logout(function (response) {
         document.getElementById("status").innerHTML = "You have logged out";
+        document.getElementById('coupons').innerHTML = "";
         document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
         checkLoginState();
         //$('#loginButton').css('display', 'block');
