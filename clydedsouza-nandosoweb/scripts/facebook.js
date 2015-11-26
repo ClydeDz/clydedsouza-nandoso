@@ -15,7 +15,6 @@ function logoutFacebook() {
         //checkLoginState();
         document.getElementById("loginButton").style.display = 'block';
         document.getElementById("logoutButton").style.display='none';
-        alert('log');
         window.location = "/specials";
        //// $('#loginButton').css('display', 'block');
         //$('#logoutButton').css('display', 'none');

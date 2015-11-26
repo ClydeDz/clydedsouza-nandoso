@@ -138,6 +138,10 @@ h1,h2,h3{
 .facebook-login-box{
     text-align:right;
 }
+.logout-facebook{
+    float:right;
+    margin:4px;
+}
 .tnc{
     font-size:small;
     font-family:sans-serif,Arial;
