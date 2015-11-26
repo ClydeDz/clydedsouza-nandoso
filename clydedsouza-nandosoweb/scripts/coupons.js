@@ -5,24 +5,11 @@
    
 });
 
-// hidden coupons
-function hideCoupons() {
-    
-   // $('#loginButton').css('display','inline-block');
-    //('#logoutButton').css('visibility', 'none');
-    //document.getElementById('loginButton').hidden = 'visible';
-    //document.getElementById('logoutButton').hidden = 'hidden';
-    //var hideCouponsText = "";
-    //hideCouponsText += "<div class='row'>";
-    //hideCouponsText += "<div class='row'>";
-    //hideCouponsText += "</div>";
-}
-
 var couponsData;
 var menuData;
+
 function getCouponData(_menuData) {
-    menuData = _menuData
-    console.log(menuData);
+    menuData = _menuData;
     CouponsModule.getCoupons(loadCouponsData);
 }
 function temp(temp_var) {
@@ -71,8 +58,8 @@ function loadCouponsData(couponsDataSet) {
         printCouponText += "<div class='coupon-item'><div class='ticket'>";
         printCouponText += "<h3>CODE: " + couponsDataSet[i].Code + "</h3>";
         printCouponText += "<p>You have received <b>" + couponsDataSet[i].Discount + "%</b> off on your next purchase of " + getMenuTitle(couponsDataSet[i].MenuID) + "";
-        printCouponText += "<br/>Expires on: " + couponsDataSet[i].ExpiresOn + "";
-        printCouponText += "<br/>" + ((couponsDataSet[i].Exemptions == "") ? "Standard T&C apply. See at the bottom of this page" : "" + couponsDataSet[i].Exemptions) + "</p>";
+        printCouponText += "&nbsp;Expires on: " + trimTimestamp(couponsDataSet[i].ExpiresOn) + "";
+        printCouponText += "&nbsp;" + ((couponsDataSet[i].Exemptions == "") ? "Standard T&C apply. See at the bottom of this page" : "" + couponsDataSet[i].Exemptions) + "</p>";
         printCouponText += "</div></div></div>";
     }
     printCouponText += "</div>";

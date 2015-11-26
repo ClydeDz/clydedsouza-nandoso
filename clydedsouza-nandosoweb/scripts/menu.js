@@ -58,7 +58,7 @@ function printMenu(commonCourse, menuList) {
         printMenuText += "" + menuList[commonCourse[i]].Description + "&nbsp;" + decodeLevel(menuList[commonCourse[i]].Level) + "</p>";
         printMenuText += "</div>";
         printMenuText += "<div class='col-lg-4 col-md-4 col-sm-4 col-xs-4'>";
-        printMenuText += "<b>$ " + menuList[commonCourse[i]].Price + "</b>";
+        printMenuText += "<b>$ " + roundOffPrice(menuList[commonCourse[i]].Price) + "</b>";
         printMenuText += "</div>";
         printMenuText += "</div>";
     }
@@ -67,4 +67,5 @@ function printMenu(commonCourse, menuList) {
     }
 }
 
-// defunction decodeLevel(level) moved to common.js since it was used by multiple files
+// function decodeLevel(level) moved to common.js since it was used by multiple files
+// f

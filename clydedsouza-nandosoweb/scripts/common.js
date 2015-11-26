@@ -63,3 +63,16 @@ function decodeLevel(level) {
     }
     return levelText;
 }
+
+// rounds of price values
+var price;
+function roundOffPrice(price) {
+    var x = parseFloat(price);
+    return +(Math.round(x + "e+" + 2) + "e-" + 2);
+}
+
+//
+var time;
+function trimTimestamp(time) {
+    return time.replace("T00:00:00", "");
+}

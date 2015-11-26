@@ -118,7 +118,9 @@ h1,h2,h3{
 }
 /* end of menu */
 
-/* ticket style css http://webdesign.tutsplus.com/tutorials/quick-tip-create-pure-css3-ticket-like-tags--webdesign-3899 */
+/***************************************************/
+
+/* specials */
 .coupon-item{
     background-color:#FFF4A7;
     margin:10px;
@@ -133,3 +135,12 @@ h1,h2,h3{
 #logoutButton{
     display:none;
 }
+.facebook-login-box{
+    text-align:right;
+}
+.tnc{
+    font-size:small;
+    font-family:sans-serif,Arial;
+    padding:20px;
+}
+/* end of specials */
