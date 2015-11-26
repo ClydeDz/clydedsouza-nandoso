@@ -126,3 +126,10 @@ h1,h2,h3{
     padding:10px;
     border:2px dashed #FE9621
 }
+
+#loginButton{
+    visibility:visible;
+}
+#logoutButton{
+    visibility:hidden;
+}

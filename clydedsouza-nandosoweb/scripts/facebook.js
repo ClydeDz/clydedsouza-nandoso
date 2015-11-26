@@ -78,8 +78,10 @@ window.fbAsyncInit = function() {
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
     //alert('here');
-    document.getElementById('loginButton').hidden = 'hidden';
-    document.getElementById('logoutButton').hidden = 'visible';
+    $('#loginButton').css('visibility', 'hidden');
+    $('#logoutButton').css('visibility', 'visible');
+    //document.getElementById('loginButton').hidden = 'hidden';
+  //  document.getElementById('logoutButton').hidden = 'visible';
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
         console.log('Successful login for: ' + response.name);

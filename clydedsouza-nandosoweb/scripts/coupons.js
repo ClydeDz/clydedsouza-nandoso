@@ -8,8 +8,11 @@
 
 // hidden coupons
 function hideCoupons() {
-    document.getElementById('loginButton').hidden = 'visible';
-    document.getElementById('logoutButton').hidden = 'hidden';
+    
+    $('#loginButton').css('visibility','visible');
+    $('#logoutButton').css('visibility', 'hidden');
+    //document.getElementById('loginButton').hidden = 'visible';
+    //document.getElementById('logoutButton').hidden = 'hidden';
     //var hideCouponsText = "";
     //hideCouponsText += "<div class='row'>";
     //hideCouponsText += "<div class='row'>";
