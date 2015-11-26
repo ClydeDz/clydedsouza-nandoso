@@ -9,8 +9,9 @@ function logoutFacebook() {
         document.getElementById('coupons').innerHTML = "";
         document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
         //checkLoginState();
-        $('#loginButton').css('display', 'block');
-        $('#logoutButton').css('display', 'none');
+        document.getElementById("loginButton").style.display = 'block';
+        document.getElementById("logoutButton").style.display='none';
+        alert('log');
         window.location = "/specials";
        //// $('#loginButton').css('display', 'block');
         //$('#logoutButton').css('display', 'none');
