@@ -1,4 +1,11 @@
-﻿function statusChangeCallback(response) {
+﻿function logoutFacebook() {
+    FB.logout(function (response) {
+        document.getElementById("status").innerHTML = "logged out";
+    });
+
+}
+
+function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
