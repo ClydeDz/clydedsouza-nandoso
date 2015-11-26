@@ -10,7 +10,7 @@ function logoutFacebook() {
         document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
         $('#loginButton').css('display', 'block');
         $('#logoutButton').css('display', 'none');
-        checkLoginState();
+        //checkLoginState();
         //$('#loginButton').css('display', 'block');
         //$('#logoutButton').css('display', 'none');
     });
