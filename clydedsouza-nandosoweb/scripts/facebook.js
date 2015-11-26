@@ -2,6 +2,7 @@
 function logoutFacebook() {
     FB.logout(function (response) {
         document.getElementById("status").innerHTML = "logged out";
+        document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
     });
 }
 
