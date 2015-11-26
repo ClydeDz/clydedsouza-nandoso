@@ -9,8 +9,8 @@
 // hidden coupons
 function hideCoupons() {
     
-    $('#loginButton').css('display','inline-block');
-    $('#logoutButton').css('visibility', 'none');
+   // $('#loginButton').css('display','inline-block');
+    //('#logoutButton').css('visibility', 'none');
     //document.getElementById('loginButton').hidden = 'visible';
     //document.getElementById('logoutButton').hidden = 'hidden';
     //var hideCouponsText = "";

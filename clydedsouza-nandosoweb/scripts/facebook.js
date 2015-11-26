@@ -3,6 +3,8 @@ function logoutFacebook() {
     FB.logout(function (response) {
         document.getElementById("status").innerHTML = "logged out";
         document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
+        $('#loginButton').css('display', 'block');
+        $('#logoutButton').css('display', 'none');
     });
 }
 
@@ -79,7 +81,7 @@ window.fbAsyncInit = function() {
 function testAPI() {
     //alert('here');
     $('#loginButton').css('display', 'none');
-    $('#logoutButton').css('display', 'inline-block');
+    $('#logoutButton').css('display', 'block');
     //document.getElementById('loginButton').hidden = 'hidden';
   //  document.getElementById('logoutButton').hidden = 'visible';
     console.log('Welcome!  Fetching your information.... ');

@@ -128,7 +128,7 @@ h1,h2,h3{
 }
 
 #loginButton{
-    display:inline-block;
+    display:block;
 }
 #logoutButton{
     display:none;
