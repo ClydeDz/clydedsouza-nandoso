@@ -77,7 +77,9 @@ window.fbAsyncInit = function() {
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
-    alert('here');
+    //alert('here');
+    document.getElementById('loginButton').hidden = 'hidden';
+    document.getElementById('logoutButton').hidden = 'visible';
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
         console.log('Successful login for: ' + response.name);

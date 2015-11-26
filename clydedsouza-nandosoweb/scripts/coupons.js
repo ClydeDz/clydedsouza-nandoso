@@ -1,8 +1,21 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
     //console.log("DOM loaded and ready to go!");
     //loadStudentsh();
-    MenuItemModule.getMenuItem(getCouponData);    
+    hideCoupons();
+    MenuItemModule.getMenuItem(getCouponData);
+
 });
+
+// hidden coupons
+function hideCoupons() {
+    document.getElementById('loginButton').hidden = 'visible';
+    document.getElementById('logoutButton').hidden = 'hidden';
+    //var hideCouponsText = "";
+    //hideCouponsText += "<div class='row'>";
+    //hideCouponsText += "<div class='row'>";
+    //hideCouponsText += "</div>";
+}
+
 var couponsData;
 var menuData;
 function getCouponData(_menuData) {
