@@ -6,7 +6,7 @@ function logoutFacebook() {
     FB.logout(function (response) {
         console.log(response);
         document.getElementById("status").innerHTML = "You have logged out";
-        //document.getElementById('coupons').innerHTML = "";
+        document.getElementById('coupons').innerHTML = "";
         document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
        //// $('#loginButton').css('display', 'block');
         //$('#logoutButton').css('display', 'none');
