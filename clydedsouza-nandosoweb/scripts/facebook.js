@@ -1,10 +1,10 @@
 ﻿var accessCard = "";
 function logoutFacebook() {
-    FB.logout(accessCard);
+    FB.logout(function (response) {
+        document.getElementById("status").innerHTML = "logged out";
+    });
 }
-FB.logout(function (response) {
-    document.getElementById("status").innerHTML = "logged out";
-});
+
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -14,7 +14,7 @@ function statusChangeCallback(response) {
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
         // Logged into your app and Facebook.
-        //accessCard = response.authResponse.accessToken;
+        console.log( response.authResponse.accessToken);
         testAPI();
     } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
