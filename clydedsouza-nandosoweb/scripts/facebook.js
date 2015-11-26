@@ -1,10 +1,14 @@
-﻿var accessCard = "";
+﻿// check facebook login status
+
+var accessCard = "";
+
 function logoutFacebook() {
     FB.logout(function (response) {
-        document.getElementById("status").innerHTML = "logged out";
+        document.getElementById("status").innerHTML = "You have logged out";
         document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
-        $('#loginButton').css('display', 'block');
-        $('#logoutButton').css('display', 'none');
+        checkLoginState();
+        //$('#loginButton').css('display', 'block');
+        //$('#logoutButton').css('display', 'none');
     });
 }
 
@@ -18,16 +22,14 @@ function statusChangeCallback(response) {
     if (response.status === 'connected') {
         // Logged into your app and Facebook.
         console.log( response.authResponse.accessToken);
-        testAPI();
+        displayFacebookProfile();
     } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into this app.';
+        document.getElementById('status').innerHTML = 'Please log into this app to reveal coupons.';
     } else {
         // The person is not logged into Facebook, so we're not sure if
         // they are logged into this app or not.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into Facebook.';
+        document.getElementById('status').innerHTML = 'Please log into this app to reveal coupons.';
     }
 }
 
@@ -78,19 +80,33 @@ window.fbAsyncInit = function() {
 
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
-function testAPI() {
-    //alert('here');
+
+// fb login confirmed display user details
+function displayFacebookProfile() {
     $('#loginButton').css('display', 'none');
     $('#logoutButton').css('display', 'block');
-    //document.getElementById('loginButton').hidden = 'hidden';
-  //  document.getElementById('logoutButton').hidden = 'visible';
     console.log('Welcome!  Fetching your information.... ');
+    // display name
     FB.api('/me', function(response) {
         console.log('Successful login for: ' + response.name);
-        document.getElementById('status').innerHTML =
-          'Thanks for logging in, ' + response.name + '!';
+        document.getElementById('status').innerHTML = 'Howdy, ' + response.name + '';
     });
+    // display picture
     FB.api('/me/picture?type=normal', function (response) {
         document.getElementById("userPhoto").setAttribute("src", response.data.url);
     });
+    // give access to coupons and call getCouponData ()
+    MenuItemModule.getMenuItem(getCouponData);
+}
+
+function displayDefaultProfile() {
+    $('#loginButton').css('display', 'block');
+    $('#logoutButton').css('display', 'none');
+    // revoke access to coupons
+    printCouponText = "";
+    printCouponText += "<div class='row'>";
+    printCouponText += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
+    printCouponText += "<p>Login using your facebook id to reveal these interesting coupons</p>";
+    printCouponText += "</div></div>";
+    document.getElementById('coupons').innerHTML = printCouponText;
 }

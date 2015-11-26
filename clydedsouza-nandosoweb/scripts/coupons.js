@@ -1,9 +1,8 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
     //console.log("DOM loaded and ready to go!");
     //loadStudentsh();
-    hideCoupons();
-    MenuItemModule.getMenuItem(getCouponData);
-
+    //hideCoupons();
+   
 });
 
 // hidden coupons
@@ -58,8 +57,12 @@ weekday[6] = "Saturday";
 
 var n = weekday[d.getDay()];
 var printCouponText = "";
+
+
 // This is the function we pass into StudentModule as the callback
 // It takes the data returned from the API call (studenList) and an input
+
+// print coupons on screen
 function loadCouponsData(couponsDataSet) {
     console.log('coupons' + couponsDataSet);
     printCouponText += "<div class='row'>";

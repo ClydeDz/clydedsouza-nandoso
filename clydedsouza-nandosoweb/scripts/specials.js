@@ -4,6 +4,7 @@
     loadWebsiteFooter();
     //loadSpecials();
     SpecialsModule.getSpecial(loadSpecials);
+    checkLoginState();
 });
 
 var d = new Date();
