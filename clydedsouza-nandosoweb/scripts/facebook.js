@@ -6,10 +6,10 @@ function logoutFacebook() {
     FB.logout(function (response) {
         console.log(response);
         document.getElementById("status").innerHTML = "You have logged out";
-        document.getElementById('coupons').innerHTML = "";
+        //document.getElementById('coupons').innerHTML = "";
         document.getElementById("userPhoto").setAttribute("src", 'Content/user-default-image.png');
-        $('#loginButton').css('display', 'block');
-        $('#logoutButton').css('display', 'none');
+       //// $('#loginButton').css('display', 'block');
+        //$('#logoutButton').css('display', 'none');
         //checkLoginState();
         //$('#loginButton').css('display', 'block');
         //$('#logoutButton').css('display', 'none');
@@ -19,6 +19,7 @@ function logoutFacebook() {
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
+    alert("chk 1");
     // The response object is returned with a status field that lets the
     // app know the current login status of the person.
     // Full docs on the response object can be found in the documentation
