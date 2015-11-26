@@ -64,6 +64,21 @@ function decodeLevel(level) {
     return levelText;
 }
 
+// decodes veg and non veg
+var level, levelText;
+function decodeVegNonVeg(level) {
+    if (level == 0) {
+        levelText = "<span><img src='Content/veg-300x259.jpg' height='15' width='15'/></span>";
+    }
+    else if (level == 1) {
+        levelText = "<span><img src='Content/non-veg-300x259.jpg' height='15' width='15'/></span>";
+    }
+    else {
+        levelText = "<span><img src='Content/veg-300x259.jpg' height='15' width='15'/></span>";
+    }
+    return levelText;
+}
+
 // rounds of price values
 var price;
 function roundOffPrice(price) {

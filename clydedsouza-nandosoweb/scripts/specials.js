@@ -27,7 +27,7 @@ function loadSpecials(specialsData) {
             printMenuText += "<div class='row menu-item-container'>";
             printMenuText += "<div class='col-lg-8 col-md-8 col-sm-8 col-xs-8'>";
             printMenuText += "<p><span  class='menu-item'>" + specialsData[i].Item + "</span></br>";
-            printMenuText += "" + specialsData[i].Description + "&nbsp;" + decodeLevel(specialsData[i].Level) + "</p>";
+            printMenuText += "" + specialsData[i].Description + "&nbsp;" + decodeLevel(specialsData[i].Level) + "&nbsp;" + decodeVegNonVeg(specialsData[i].Type) + "</p>";
             printMenuText += "</div>";
             printMenuText += "<div class='col-lg-4 col-md-4 col-sm-4 col-xs-4'>";
             printMenuText += "Today's special <b>$ " + roundOffPrice((specialsData[i].Price - ((specialsData[i].Discount / 100) * specialsData[i].Price))) + "</b><br/>Original price $ " + roundOffPrice(specialsData[i].Price);
@@ -44,7 +44,7 @@ function loadSpecials(specialsData) {
 }
 
 // This is the function we pass into StudentModule as the callback
-// It takes the data returned from the API call (studenList) and an input
+// It takes the data returned from the API call (studenList) and an input **unused**
 function setupStudentsTable(studentsList) {
 
     // Get a reference to the table body so we can add our rows in

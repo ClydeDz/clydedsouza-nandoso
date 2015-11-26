@@ -108,6 +108,7 @@ h1,h2,h3{
 /* menu */
 .menu-item{
     color:#DB0000;
+    font-size:larger;
 }
 .display-menu > div > h2{
     color:#474747;
