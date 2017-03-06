@@ -22,7 +22,7 @@ headerText += "</div>";
 headerText += "</div>";
 headerText += "<div class='container-fluid custom-jumbotron-container'>";
 headerText += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 jumbotron'><div class='content'>";
-headerText += "<img src='https://googledrive.com/host/0B3iPDNpwGU-tM25wT1VSUmJvdjA/nandoso-light.png' height='90' width='90' class='img img-responsive site-logo'/>";
+headerText += "<img src='images/nandoso-light.png' height='90' width='90' class='img img-responsive site-logo'/>";
 headerText += "<h1 class='header-text'>Nandoso</h1>";
 headerText += "</div></div>";
 headerText += "</div>";
@@ -39,7 +39,7 @@ footerText += "<div class='container'>";
 footerText += "<div class='row'>";
 footerText += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
 footerText += "<a href='/'>Home</a> | <a href='/menu'>Menu</a> | <a href='/specials'>Specials</a> | <a href='/feedback'>Feedback</a> | <a href='/find-us'>Find Us</a></br>";
-footerText += "&copy Nandoso Restaurants Ltd, " + year;
+footerText += "Website crafted by <a href='http://clydedsouza.net' rel='author'>Clyde D'Souza</a> as a part of an academic assignment | &copy Nandoso Restaurants Ltd, " + year;
 footerText += "</div>"; // col
 footerText += "</div>"; // row
 footerText += "</div>"; // container

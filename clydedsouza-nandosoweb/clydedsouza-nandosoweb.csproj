@@ -99,7 +99,15 @@
     <Content Include="Content\non-veg-300x259.jpg" />
     <Content Include="Content\user-default-image.png" />
     <Content Include="Content\veg-300x259.jpg" />
+    <Content Include="favicon.ico" />
     <Content Include="fonts\comic_zine_ot-webfont.svg" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\food1.jpg" />
+    <Content Include="images\food2.jpg" />
+    <Content Include="images\food3.jpg" />
+    <Content Include="images\food4.jpg" />
+    <Content Include="images\nandoso-dark.png" />
+    <Content Include="images\nandoso-light.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
